@@ -1,3 +1,4 @@
+-- EDA
 select continent, location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as deathpercentage
 FROM portfolioproject.coviddeaths
 -- where location like '%kenya%' 
@@ -5,7 +6,7 @@ FROM portfolioproject.coviddeaths
 order by 1, cast(date as DATE);
 
 
--- EDA 
+ 
 -- TOTAL DEATHS Vs TOTAL CASES (Likelihood of dying if you contract the virus in Kenya)
 
 select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as deathpercentage
@@ -105,7 +106,7 @@ where continent is not null and continent <>''
 group by date
 order by cast(date as DATE),2;
 
--- Views Created for Visualization
+
 
 
 
